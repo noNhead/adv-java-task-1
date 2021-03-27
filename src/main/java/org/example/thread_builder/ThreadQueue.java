@@ -21,5 +21,7 @@ public class ThreadQueue {
         for (int i = 0; i < NUMBER_OF_THREAD_REQUEST_OPERATION; i++) {
             executor.submit(recordOut);
         }
+
+        executor.shutdown();
     }
 }

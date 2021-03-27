@@ -2,15 +2,9 @@ package org.example.thread_builder;
 
 public class RecordOut implements Runnable {
     private final HotelRequestOperation hotelRequestOperation;
-    private boolean isActive;
 
     RecordOut(HotelRequestOperation hotelRequestOperation){
         this.hotelRequestOperation = hotelRequestOperation;
-        this.isActive = true;
-    }
-
-    public void disable(){
-        isActive = false;
     }
 
     @Override
