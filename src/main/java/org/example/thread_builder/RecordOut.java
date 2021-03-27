@@ -1,8 +1,8 @@
 package org.example.thread_builder;
 
 public class RecordOut implements Runnable {
-    private final HotelRequestOperation hotelRequestOperation;
     public static final int TIME_TO_THREAD_WAIT = 500;
+    private final HotelRequestOperation hotelRequestOperation;
 
     RecordOut(HotelRequestOperation hotelRequestOperation){
         this.hotelRequestOperation = hotelRequestOperation;
@@ -11,7 +11,7 @@ public class RecordOut implements Runnable {
     @Override
     public void run() {
         try {
-            //hotelRequestOperation.deleteRecord();
+            hotelRequestOperation.deleteRecord();
             wait(TIME_TO_THREAD_WAIT);
         } catch (InterruptedException e) {
             e.printStackTrace();
