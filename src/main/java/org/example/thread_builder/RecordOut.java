@@ -18,10 +18,10 @@ public class RecordOut implements Runnable {
         try {
             //hotelRequestOperation.deleteRecord();
             Thread.sleep(100);
-            System.out.println("Thread is sleep on a 100 millis");
         } catch (InterruptedException e) {
             e.printStackTrace();
         } finally {
+            System.out.println("Thread is sleep on a 100 millis");
             Thread.currentThread().interrupt();
         }
     }

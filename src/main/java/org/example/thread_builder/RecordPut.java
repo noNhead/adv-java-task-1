@@ -1,6 +1,6 @@
 package org.example.thread_builder;
 
-public class RecordPut implements Runnable{
+public class RecordPut implements Runnable {
     private final HotelRequestOperation hotelRequestOperation;
     private boolean isActive;
 
@@ -19,6 +19,7 @@ public class RecordPut implements Runnable{
         try {
             hotelRequestOperation.put();
         } finally {
+            System.out.println("Thread dead");
             Thread.currentThread().interrupt();
         }
     }
